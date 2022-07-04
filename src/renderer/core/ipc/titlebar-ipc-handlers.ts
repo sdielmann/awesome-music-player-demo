@@ -1,30 +1,8 @@
 import { ipcRenderer } from 'electron';
-import { Track } from '@shared/track';
 
 const titlebarIpcHandlers = {
   exit() {
     ipcRenderer.invoke('window-close');
-  },
-  undo() {
-    ipcRenderer.invoke('web-undo');
-  },
-  redo() {
-    ipcRenderer.invoke('web-redo');
-  },
-  cut() {
-    ipcRenderer.invoke('web-cut');
-  },
-  copy() {
-    ipcRenderer.invoke('web-copy');
-  },
-  paste() {
-    ipcRenderer.invoke('web-paste');
-  },
-  delete() {
-    ipcRenderer.invoke('web-delete');
-  },
-  select_all() {
-    ipcRenderer.invoke('web-select-all');
   },
   reload() {
     ipcRenderer.invoke('web-reload');
@@ -35,29 +13,17 @@ const titlebarIpcHandlers = {
   toggle_devtools() {
     ipcRenderer.invoke('web-toggle-devtools');
   },
-  actual_size() {
-    ipcRenderer.invoke('web-actual-size');
-  },
-  zoom_in() {
-    ipcRenderer.invoke('web-zoom-in');
-  },
-  zoom_out() {
-    ipcRenderer.invoke('web-zoom-out');
-  },
-  toggle_fullscreen() {
-    ipcRenderer.invoke('web-toggle-fullscreen');
-  },
   minimize() {
     ipcRenderer.invoke('window-minimize');
-  },
-  toggle_maximize() {
-    ipcRenderer.invoke('window-toggle-maximize');
   },
   open_url(url: string) {
     ipcRenderer.invoke('open-url', url);
   },
-  open_file(): Promise<Track> {
-    return ipcRenderer.invoke('open-file');
+  /* ToDo: Adapt this method here so that it calls the ipcRenderer.invoke function. The same string channel identifier
+      must be used as defined in the backend handler. The Promise returned by ipcRenderer.invoke will contain the
+      "Track" object sent by the IpcMain thread. */
+  open_file() {
+    console.log('Not implemented!');
   },
 };
 

@@ -25,13 +25,6 @@ const WindowControls: React.FC<Props> = (props) => {
         ─
       </div>
       <div
-        className='control maximize'
-        onClick={() => titlebar.toggle_maximize()}
-        title={props.tooltips ? 'Maximize' : null}
-      >
-        ☐
-      </div>
-      <div
         className='control close'
         onClick={() => titlebar.exit()}
         title={props.tooltips ? 'Close' : null}

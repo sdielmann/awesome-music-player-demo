@@ -19,7 +19,6 @@ export function createAppWindow(): BrowserWindow {
   window = new BrowserWindow({
     width: 800,
     height: 500,
-    backgroundColor: '#1f252c',
     show: false,
     resizable: false,
     autoHideMenuBar: true,
@@ -37,6 +36,10 @@ export function createAppWindow(): BrowserWindow {
 
   // Load the index.html of the app window.
   window.loadURL(APP_WINDOW_WEBPACK_ENTRY);
+
+  window.webContents.on('devtools-opened', () => {
+    setImmediate(() => window.focus());
+  });
 
   // Show window when its ready to
   window.on('ready-to-show', () => {

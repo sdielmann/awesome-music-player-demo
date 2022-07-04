@@ -1,15 +1,14 @@
 import { setTrack } from '@renderer/store/player';
-import useIpc from '@renderer/core/ipc/use-ipc';
 import { useDispatch } from 'react-redux';
 
 export const useTrackSelector = () => {
-  const ipc = useIpc();
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
   async function openTrack() {
-    const track = await ipc.titlebar.open_file();
-    console.log('[AMP]: New track selected:', track);
-    dispatch(setTrack(track));
+    /* ToDo: Try to retrieve the "Track" object from the main thread here and assign it to the store, using the setTrack
+    *   action. */
+    console.log('Not implemented!');
+    //dispatch(setTrack(track));
   }
 
   return { openTrack };

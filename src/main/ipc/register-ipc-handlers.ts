@@ -1,54 +1,12 @@
-import { BrowserWindow, ipcMain, shell, dialog } from 'electron';
-import { openMp3Track } from '@main/audio';
-import type { Track } from '@shared/track';
+import { BrowserWindow, ipcMain, shell } from 'electron';
 
 export const registerIpcHandlers = (mainWindow: BrowserWindow) => {
   ipcMain.handle('window-minimize', () => {
     mainWindow.minimize();
   });
 
-  ipcMain.handle('window-maximize', () => {
-    mainWindow.maximize();
-  });
-
-  ipcMain.handle('window-toggle-maximize', () => {
-    if (mainWindow.isMaximized()) {
-      mainWindow.unmaximize();
-    } else {
-      mainWindow.maximize();
-    }
-  });
-
   ipcMain.handle('window-close', () => {
     mainWindow.close();
-  });
-
-  ipcMain.handle('web-undo', () => {
-    mainWindow.webContents.undo();
-  });
-
-  ipcMain.handle('web-redo', () => {
-    mainWindow.webContents.redo();
-  });
-
-  ipcMain.handle('web-cut', () => {
-    mainWindow.webContents.cut();
-  });
-
-  ipcMain.handle('web-copy', () => {
-    mainWindow.webContents.copy();
-  });
-
-  ipcMain.handle('web-paste', () => {
-    mainWindow.webContents.paste();
-  });
-
-  ipcMain.handle('web-delete', () => {
-    mainWindow.webContents.delete();
-  });
-
-  ipcMain.handle('web-select-all', () => {
-    mainWindow.webContents.selectAll();
   });
 
   ipcMain.handle('web-reload', () => {
@@ -63,27 +21,11 @@ export const registerIpcHandlers = (mainWindow: BrowserWindow) => {
     mainWindow.webContents.toggleDevTools();
   });
 
-  ipcMain.handle('web-actual-size', () => {
-    mainWindow.webContents.setZoomLevel(0);
-  });
-
-  ipcMain.handle('web-zoom-in', () => {
-    mainWindow.webContents.setZoomLevel(mainWindow.webContents.zoomLevel + 0.5);
-  });
-
-  ipcMain.handle('web-zoom-out', () => {
-    mainWindow.webContents.setZoomLevel(mainWindow.webContents.zoomLevel - 0.5);
-  });
-
-  ipcMain.handle('web-toggle-fullscreen', () => {
-    mainWindow.setFullScreen(!mainWindow.fullScreen);
-  });
-
   ipcMain.handle('open-url', (e, url) => {
     shell.openExternal(url);
   });
 
-  ipcMain.handle('open-file', async (e): Promise<Track> => {
-    return openMp3Track();
-  });
+  /* ToDo: Create a new IPC handler here. In that listener, you should return the Promise of the openMp3Track() function
+  *   which can be imported from '@main/audio'. The function opens a file dialog where you can choose an MP3 file and
+  *   asynchronously returns an object of type "Track". */
 };
