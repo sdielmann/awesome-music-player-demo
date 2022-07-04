@@ -3,6 +3,9 @@
 This project serves the purpose of an exercise project for Electron development. It is based on the
 [ERWT boilerplate](https://github.com/codesbiome/electron-react-webpack-typescript-2022) and has been highly customized.
 
+![Awesome Music Player](./documentation/app.png)
+
+
 ## Prerequisites
 
 - [NodeJS](https://nodejs.org/en/) must be installed
