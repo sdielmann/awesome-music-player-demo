@@ -1,0 +1,49 @@
+// Exo 2 Font Family
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
+
+body {
+  --base-font-size: 16px;
+  --base-font: 'Exo 2', 'Segoe UI', sans-serif;
+  --base-bgcolor: #f0f0f0;
+  --selection-color: #fff;
+  --selection-bgColor: #677687;
+  --scroll-width: 10px;
+  --scroll-track-bgColor: #2f2f2f52;
+  --scroll-thumb-bgColor: rgba(59, 59, 59, 0.5);
+  --scroll-thumb-hover-bgColor: #555;
+  --button-color: #778ca9;
+  --button-bgColor: #ffffff;
+  --button-gradient: linear-gradient(0deg, #f1f3f5, white);
+  --button-border: none;
+  --button-hover-bgColor: #f4f5f7;
+  --button-active-bgColor: #f1f1f1;
+  --button-badge-color: #778ca9;
+  --button-badge-bgColor: #e2e8f0;
+
+  --app-footer-bgColor: #e0e5eb;
+  --app-heading-color: #728296;
+  --amp-gradient: linear-gradient(
+    180deg,
+    transparent,
+    var(--titlebar-bgcolor)
+  );
+
+  --titlebar-bgcolor: #f7f7f7;
+  --titlebar-color: #575757;
+  --titlebar-title-color: #575757;
+  --titlebar-menu-title-hover-bgColor: rgba(255, 255, 255, 0.6);
+  --titlebar-menu-title-active-bgColor: #f6f9fa;
+  --titlebar-menu-title-active-borderColor: #e2e8f0;
+  --titlebar-menu-title-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  --titlebar-menu-separator-bgColor: var(--titlebar-bgcolor);
+  --titlebar-popup-bgColor: #f6f9fa;
+  --titlebar-popup-border: none;
+  --titlebar-popup-shadow: 4px 10px 10px rgba(0, 0, 0, 0.2);
+  --titlebar-popup-item-name-color: #575757;
+  --titlebar-popup-item-shortcut-color: #939393;
+  --titlebar-popup-item-hover-bgColor: rgba(157, 204, 230, 0.1);
+  --titlebar-popup-item-hover-shortcut-color: #939393;
+
+  --player-text-color: #ffffff;
+  --player-text-shadow: 0 0 12px black;
+}
