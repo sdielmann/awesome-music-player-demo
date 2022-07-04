@@ -12,5 +12,8 @@ module.exports = {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
     alias: require('./webpack.aliases'),
   },
+  externals: {
+    'react-native-fs': 'reactNativeFs'
+  },
   stats: 'minimal',
 };

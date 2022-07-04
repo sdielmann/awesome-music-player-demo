@@ -14,8 +14,6 @@
     "resolveJsonModule": true,
     "paths": {
       "*": ["node_modules/*"],
-      "@assets/*": ["./assets/*"],
-      "@components/*": ["./src/renderer/components/*"],
       "@shared/*": ["./src/shared/*"],
       "@main/*": ["./src/main/*"],
       "@renderer/*": ["./src/renderer/*"],

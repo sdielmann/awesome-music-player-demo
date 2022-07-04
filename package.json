@@ -8,7 +8,6 @@
     "start": "cross-env NODE_ENV=development electron-forge start --inspect-electron",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
     "lint": "eslint src/ --ext .ts,.js,.tsx,.jsx"
   },
   "author": {
@@ -17,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codesbiome/electron-react-webpack-typescript-2022"
+    "url": "https://github.com/sdielmann/awesome-music-player-demo"
   },
   "license": "MIT",
   "config": {

@@ -56,7 +56,7 @@ const titlebarMenus: TitlebarMenu[] = [
       {
         name: 'GitHub Repository',
         action: 'open_url',
-        value: 'https://github.com/sdielmann/hsd-electron-exercise',
+        value: 'https://github.com/sdielmann/awesome-music-player-demo',
       },
     ],
   },

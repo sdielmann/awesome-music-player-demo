@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
 import WindowFrame from '@renderer/window/window-frame';
-import Application from '@components/application';
+import Application from '@renderer/core/application';
 import { store } from './store';
 
 // Say something
